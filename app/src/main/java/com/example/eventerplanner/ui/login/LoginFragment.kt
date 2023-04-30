@@ -1,4 +1,8 @@
 package com.example.eventerplanner.ui.login
 
-class LoginFragment {
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+
+class LoginFragment: Fragment() {
+
 }
