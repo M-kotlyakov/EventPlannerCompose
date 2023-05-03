@@ -1,5 +1,6 @@
 package com.example.eventerplanner.presentation.theme
 
+import android.content.res.Resources
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors

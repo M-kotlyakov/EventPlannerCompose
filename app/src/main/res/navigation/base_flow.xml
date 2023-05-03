@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_flow"
+    app:startDestination="@id/firstFragment">
+
+    <include app:graph="@navigation/tab_home" />
+    <include app:graph="@navigation/tab_friends" />
+    <include app:graph="@navigation/tab_chat" />
+    <include app:graph="@navigation/tab_profile" />
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.eventerplanner.ui.firstScreen.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.eventerplanner.ui.auth.signIn.SignInFragment"
+        android:label="SignInFragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.eventerplanner.ui.auth.signUp.SignUpFragment"
+        android:label="SignUpFragment" />
+
+
+</navigation>

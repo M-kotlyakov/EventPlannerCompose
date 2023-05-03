@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.eventerplanner.ui.bottomTabs.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailCategoriesFragment"
+            app:destination="@id/detailCategoriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailEventFragment"
+            app:destination="@id/detailEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailEventFragment"
+        android:name="com.example.eventerplanner.ui.bottomTabs.home.detailEvent.DetailEventFragment"
+        android:label="DetailEventFragment" />
+    <fragment
+        android:id="@+id/detailCategoriesFragment"
+        android:name="com.example.eventerplanner.ui.bottomTabs.home.detailCategories.DetailCategoriesFragment"
+        android:label="DetailCategoriesFragment" >
+        <action
+            android:id="@+id/action_detailCategoriesFragment_to_detailEventFragment"
+            app:destination="@id/detailEventFragment" />
+    </fragment>
+</navigation>

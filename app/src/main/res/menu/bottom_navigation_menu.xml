@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@id/tab_home"
+        android:icon="@drawable/ic_round_home_black"
+        android:title="@string/ic_round_home"/>
+    <item
+        android:id="@id/tab_friends"
+        android:icon="@drawable/ic_friends"
+        android:title="@string/ic_friends"/>
+    <item
+        android:id="@id/tab_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/ic_round_home"/>
+    <item
+        android:id="@id/tab_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/ic_profile"/>
 </menu>

@@ -7,7 +7,5 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface EventDao {
 
-    suspend fun getListEvents(): Flow<List<EventDbModel>>
-
-
+//    suspend fun getListEvents(): Flow<List<EventDbModel>>
 }

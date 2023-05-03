@@ -1,34 +1,42 @@
 package com.example.eventerplanner.ui
 
 import android.os.Bundle
-import androidx.activity.compose.setContent
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import com.example.eventerplanner.presentation.theme.EventerPlannerTheme
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.example.eventerplanner.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            EventerPlannerTheme {
-                Greeting()
+        setContentView(R.layout.activity_main)
+
+        val navHost: NavHostFragment = supportFragmentManager
+            .findFragmentById(R.id.main_nav_host_fragment) as NavHostFragment ?: return
+
+        val navController = navHost.navController
+        setupBottomNavView(navController)
+        setupStartPoint()
+    }
+
+    private fun setupStartPoint() {
+
+    }
+
+    private fun setupBottomNavView(navController: NavController) {
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
+        bottomNav?.setupWithNavController(navController)
+        navController.addOnDestinationChangedListener {_, destination, _ ->
+            if (destination.id == R.id.firstFragment
+                || destination.id == R.id.signInFragment
+                || destination.id == R.id.signUpFragment) {
+                bottomNav.visibility = View.GONE
+            } else {
+                bottomNav.visibility = View.VISIBLE
             }
         }
-    }
-}
-
-@Composable
-fun Greeting() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Hello, Android")
     }
 }
