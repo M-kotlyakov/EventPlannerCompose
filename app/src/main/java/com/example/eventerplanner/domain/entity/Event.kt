@@ -1,8 +1,10 @@
 package com.example.eventerplanner.domain.entity
 
-data class EventItem(
+import androidx.room.ColumnInfo
+
+data class Event(
     val id: Int,
-    val place: String,
+    val address: String,
     val startDateTime: String,
     val startDate: String,
     val endDateTime: String,

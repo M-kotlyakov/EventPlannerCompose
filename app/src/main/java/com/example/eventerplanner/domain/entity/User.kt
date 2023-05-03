@@ -1,8 +1,10 @@
 package com.example.eventerplanner.domain.entity
 
-data class UserItem(
+import androidx.room.ColumnInfo
+
+data class User(
     val id: Int,
-    val imageAvatar: String,
+    val imageUrl: String?,
     val firstName: String,
     val lastName: String,
     val phoneNumber: String,
