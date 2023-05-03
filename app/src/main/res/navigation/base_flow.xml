@@ -28,6 +28,14 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.eventerplanner.ui.auth.signUp.SignUpFragment"
         android:label="SignUpFragment" />
+    <fragment
+        android:id="@+id/failFragment"
+        android:name="com.example.eventerplanner.ui.fail.FailFragment"
+        android:label="FailFragment" />
+
+    <action
+        android:id="@+id/action_global_failFragment"
+        app:destination="@id/failFragment"/>
 
 
 </navigation>

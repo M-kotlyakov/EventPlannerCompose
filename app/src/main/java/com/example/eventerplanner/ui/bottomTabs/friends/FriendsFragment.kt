@@ -42,7 +42,9 @@ class FriendsFragment : Fragment() {
                             fontSize = 36.sp
                         )
 
-                        Button(onClick = {}) {
+                        Button(onClick = {
+                            findNavController().navigate(R.id.failFragment)
+                        }) {
                             Text(text = "Жмакни меня снова )))")
                         }
                     }
