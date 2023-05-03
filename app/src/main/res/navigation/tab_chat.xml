@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_chat"
+    app:startDestination="@id/chatFragment">
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.eventerplanner.ui.bottomTabs.chat.ChatFragment"
+        android:label="ChatFragment">
+        <action
+            android:id="@+id/action_chatFragment_to_detailChatFragment"
+            app:destination="@id/detailChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailChatFragment"
+        android:name="com.example.eventerplanner.ui.bottomTabs.chat.detailChat.DetailChatFragment"
+        android:label="DetailChatFragment" />
+</navigation>

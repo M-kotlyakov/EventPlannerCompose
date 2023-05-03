@@ -1,4 +1,4 @@
-package com.example.eventerplanner.ui.fail
+package com.example.eventerplanner.ui.bottomTabs.chat.detailChat
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import com.example.eventerplanner.presentation.theme.EventerPlannerTheme
 
-class FailFragment : Fragment() {
+class DetailChatFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,7 +34,7 @@ class FailFragment : Fragment() {
                     ) {
 
                         Text(
-                            text = "FailFragment",
+                            text = "DetailChatFragment",
                             fontSize = 36.sp
                         )
                     }
