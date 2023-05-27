@@ -4,4 +4,5 @@
     <string name="ic_friends">Friends</string>
     <string name="ic_chat">Chat</string>
     <string name="ic_profile">Profile</string>
+    <string name="empty_event_list">кажется ничего не намечается в ближайшее время</string>
 </resources>

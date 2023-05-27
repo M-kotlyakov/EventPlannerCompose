@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".ui.App"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"

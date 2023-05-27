@@ -7,6 +7,6 @@ import com.example.eventerplanner.data.database.entity.UserDbModel
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM user_items WHERE id =:userId")
-    suspend fun getUser(userId: Int): UserDbModel
+//    @Query("SELECT * FROM user_items WHERE id =:userId")
+//    suspend fun getUser(userId: Int): UserDbModel
 }

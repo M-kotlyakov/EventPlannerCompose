@@ -1,8 +1,10 @@
 package com.example.eventerplanner.domain.entity
 
-import androidx.room.ColumnInfo
+import com.example.eventerplanner.data.database.entity.EventDbModel
 
 data class CardCategories(
-    val id: Int,
-    val eventId: Int
+    val cardCategoriesId: Int = 0,
+    val categoriesName: String = "event",
+    val countOfEvents: Int = 0,
+    val eventList: List<Event> = emptyList()
 )
